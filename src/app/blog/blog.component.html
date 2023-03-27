@@ -1,0 +1,15 @@
+<section class="listWrapper">
+    <mat-spinner *ngIf="isLoading"></mat-spinner>
+    <mat-card *ngIf="!isLoading && entries.length === 0">
+        <mat-card-content style="text-align: center;">
+            No blog entries yet
+        </mat-card-content>
+    </mat-card>
+    <ul *ngIf="!isLoading && entries.length > 0" class="blogList">
+        <li *ngFor="let entry of entries" class="blogEntry">
+            <app-blog-entry
+                [entry]="entry">
+            </app-blog-entry>
+        </li>
+    </ul>
+</section>

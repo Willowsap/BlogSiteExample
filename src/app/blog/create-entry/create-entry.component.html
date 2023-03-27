@@ -1,0 +1,13 @@
+<main id="entryWrapper">
+    <form (ngSubmit)="addEntry(blogForm)" #blogForm="ngForm">
+        <mat-form-field>
+            <label for="title">Title</label>
+            <input matNativeControl type="text" name="title" id="title" ngModel class="blogInput">
+        </mat-form-field>
+        <mat-form-field>
+            <label for="content">Content</label>
+            <textarea matNativeControl name="content" id="content" ngModel class="blogInput"></textarea>
+        </mat-form-field>
+        <button type="submit" mat-raised-button>Submit</button>
+    </form>
+</main>
